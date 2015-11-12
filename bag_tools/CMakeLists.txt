@@ -11,6 +11,8 @@ catkin_package(
   CATKIN_DEPENDS rosbag
 )
 
+catkin_add_env_hooks(20.insert_msg SHELLS bash DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/env-hooks)
+
 include_directories(include ${Boost_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS} ${console_bridge_INCLUDE_DIRS})
 
 add_executable(extract_images src/extract_images.cpp)
