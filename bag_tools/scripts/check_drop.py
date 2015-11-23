@@ -99,6 +99,7 @@ def check_drop(inbags, plot_format='png'):
   topics = msg_time_diff.keys()
   topics.sort()
 
+  mpl.RcParams['agg.path.chunksize'] = 10000
 
   for topic in topics:
     msg_time_diff_topic = msg_time_diff[topic]
